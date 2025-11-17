@@ -1,0 +1,7 @@
+# Compiled output
+/dist
+/pkg
+/target
+
+# Logs
+*.log
