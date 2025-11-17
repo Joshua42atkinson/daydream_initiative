@@ -41,5 +41,5 @@ codegen-units = 1
 panic = "abort"
 
 [[bin]]
-name = "server"
-path = "src/bin/server.rs"
+name = "server_app"
+path = "src/axum_server.rs"
