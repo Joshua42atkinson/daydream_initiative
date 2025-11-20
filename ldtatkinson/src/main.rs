@@ -1,5 +1,5 @@
 use leptos::prelude::*;
-use ldtatkinson::App; // Correct import for the Portfolio
+use ldtatkinson::app::App;
 use wasm_bindgen::prelude::*;
 
 // --- DAYDREAM CORE: REFLECTION INTERFACE ---
