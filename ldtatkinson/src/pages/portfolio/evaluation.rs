@@ -11,7 +11,7 @@ struct EvaluationItem {
 
 #[component]
 pub fn Evaluation() -> impl IntoView {
-    let (selected_item, set_selected_item) = create_signal::<Option<EvaluationItem>>(None);
+    let (selected_item, set_selected_item) = signal::<Option<EvaluationItem>>(None);
 
     let items = vec![
         EvaluationItem {

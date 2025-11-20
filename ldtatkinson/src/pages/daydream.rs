@@ -11,11 +11,11 @@ struct DaydreamItem {
 
 #[component]
 pub fn Daydream() -> impl IntoView {
-    let (selected_item, set_selected_item) = create_signal::<Option<DaydreamItem>>(None);
+    let (selected_item, set_selected_item) = signal::<Option<DaydreamItem>>(None);
 
     // --- ARTISTIC FLAIR: The Persona Quiz State ---
-    let (quiz_stage, set_quiz_stage) = create_signal(0); // 0=Start, 1=Question, 2=Result
-    let (archetype, set_archetype) = create_signal(""); 
+    let (quiz_stage, set_quiz_stage) = signal(0); // 0=Start, 1=Question, 2=Result
+    let (archetype, set_archetype) = signal("");
 
     let items = vec![
         DaydreamItem {

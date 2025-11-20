@@ -11,7 +11,7 @@ struct FoundationItem {
 
 #[component]
 pub fn Foundations() -> impl IntoView {
-    let (selected_item, set_selected_item) = create_signal::<Option<FoundationItem>>(None);
+    let (selected_item, set_selected_item) = signal::<Option<FoundationItem>>(None);
 
     let items = vec![
         FoundationItem {
