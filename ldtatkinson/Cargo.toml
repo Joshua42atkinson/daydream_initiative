@@ -29,15 +29,8 @@ tracing-subscriber = { version = "0.3", optional = true }
 name = "client_app"
 path = "src/main.rs"
 
-[[bin]]
-name = "server_app"
-path = "src/axum_server.rs"
-required-features = ["ssr"]
 
 [features]
-# FIX: Only enable hydration for the core library
-hydrate = ["leptos/hydrate"]
-ssr = ["dep:axum", "dep:tokio", "dep:tower-http", "dep:tracing", "dep:tracing-subscriber", "leptos/ssr", "leptos_meta/ssr", "leptos_router/ssr", "dep:leptos_axum"]
 
 [profile.release]
 opt-level = 'z'
@@ -69,10 +62,5 @@ browserquery = "defaults"
 watch = false
 # The environment Leptos will run in, usually either "DEV" or "PROD"
 env = "DEV"
-# The features to use when compiling the bin target
-bin-features = ["ssr"]
-bin-target = "server_app"
-# The features to use when compiling the lib target
-lib-features = ["hydrate"]
 # The profile to use for the lib target when compiling for release
 lib-profile-release = "wasm-release"
